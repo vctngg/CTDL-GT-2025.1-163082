@@ -11,6 +11,7 @@ void SelectionSort(vector<int> &targeted_list, int n){
    //cout << setw(0) << "No.";
    //cout << setw(5) << "min\n";
    //cout << n;
+   int a = 2;
    for (int i=0;i<n;i++){
       int min_index = i;
       //cout << setw(0) << i;
