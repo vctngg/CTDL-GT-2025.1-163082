@@ -1,2 +1,0 @@
-# CTDL-GT-2025.1-163082
-Nguyễn Việt Anh mssv 202413944
