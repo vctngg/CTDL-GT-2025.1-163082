@@ -1,30 +1,34 @@
 #include <iostream>
 #include <iomanip>
 #include <vector>
+#include <algorithm>
 using namespace std;
-void swap(int a, int b){
-   int t = a;
-   a = b;
-   b = t;
-}
+
 void SelectionSort(vector<int> &targeted_list, int n){
-   //cout << setw(0) << "No.";
-   //cout << setw(5) << "min\n";
-   //cout << n;
-   int a = 2;
-   for (int i=0;i<n;i++){
+   cout << "No.";
+   cout << setw(10) << "min\n";
+   for (int i=0;i<n-1;i++){
       int min_index = i;
-      //cout << setw(0) << i;
+      cout << i+1;
       for (int j=i+1;j<n;j++){
          if (targeted_list[j]<targeted_list[min_index]){
             min_index = j;
          }
       }
+      cout << setw(10) << targeted_list[min_index];
       swap(targeted_list[i],targeted_list[min_index]);
+      for (int k=0;k<n;k++){
+        cout << setw(10) << targeted_list[k];
+      }
+      cout << "\n";
    }
 }
 void InsertionSort(vector<int> &targeted_list, int n){
-    for (int i=0;i<n;i++){
+    cout << "No.";
+    cout << setw(10) << "Target\n";
+    for (int i=1;i<n;i++){
+        cout << i;
+        cout << setw(10) << targeted_list[i];
         int x = targeted_list[i];
         int j = i;
         while( j>0 && targeted_list[j-1]>x){
@@ -32,16 +36,27 @@ void InsertionSort(vector<int> &targeted_list, int n){
             j--;
         }
         targeted_list[j] = x;
+        for (int k=0;k<n;k++){
+            cout << setw(10) << targeted_list[k];
+        }
+        cout << "\n";
+
     }
 }
 void BubbleSort(vector<int> &targeted_list, int n){
     int i,j;
+    cout << "No.\n";
     for (i=0;i<n-2;i++){
+        cout << i+1;
         for (j=n-1;j>i;j--){
             if (targeted_list[j]<targeted_list[j-1]){
                 swap(targeted_list[j],targeted_list[j-1]);
             }
         }
+        for (int k=0;k<n;k++){
+            cout << setw(10) << targeted_list[k];
+        }
+        cout << '\n';
     }
 }
 int main(){
