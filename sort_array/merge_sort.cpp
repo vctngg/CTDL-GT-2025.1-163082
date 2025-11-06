@@ -16,6 +16,10 @@ void MergeArr(int arr[],int m, int n, int p){
             j++;
         }
     }
+    for (int k=0;k<6;k++){
+        cout << setw(10) << arr[k];
+    }
+    cout << '\n';
 }
 void SplitMergeArr(int arr[],int f,int l){
     if (f>=l) {return;}

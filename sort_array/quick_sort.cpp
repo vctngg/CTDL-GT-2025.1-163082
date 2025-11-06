@@ -12,14 +12,15 @@ void partition(int arr[],int f,int l){
         if (m<n) {swap(arr[m],arr[n]);}
     }
     swap(arr[f],arr[n]);
+    for (int k=0;k<6;k++){
+        cout << setw(10) << arr[k];
+    }
+    cout << '\n';
     partition(arr,f,n-1);
     partition(arr,n+1,l);
 }
 void QuickSort(int arr[],int n){
     partition(arr,0,n-1);
-    for (int k=0;k<n;k++){
-        cout << setw(10) << arr[k];
-    }
 }
 int main(){
     int l[] = {3,105,94,22,32,19};
